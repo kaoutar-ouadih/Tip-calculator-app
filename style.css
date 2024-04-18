@@ -1,0 +1,226 @@
+/* CSS reset */
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    /* ### Primary */
+
+    --Strong-cyan: hsl(172, 67%, 45%);
+
+    /* ### Neutral */
+
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    font-family: "Space Mono", sans-serif;
+}
+body{
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Dark-grayish-cyan);
+    font-weight: 600;
+}
+.container{
+    width: 50%;
+    border-radius: 15px;
+    background-color: var(--White);
+    padding: 1.5em;
+    display: flex;
+    gap: 1.3em;
+    margin: 4em 0;
+    min-width: 600px;
+    max-width: 650px;
+}
+.bill-section{
+    width: 48%;
+}
+.total-section{
+    background-color: var(--Very-dark-cyan);
+    width: 48%;
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--White);
+}
+.total-section-one{
+    width: 40%;
+}
+.total-section-two{
+    width: 60%;
+}
+.total-section-two h1{
+    float: right;
+}
+span{
+    color: var(--Grayish-cyan);
+}
+.total-section button{
+    width: 100%;
+    height: 40px;
+    text-transform: uppercase;
+    background-color: var(--Grayish-cyan);
+    color: var(--Very-dark-cyan);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    align-self: flex-end;
+}
+.total-section button:hover{
+    background-color: var(--Strong-cyan);
+    cursor: pointer;
+}
+.total-section h1{
+    color: var(--Strong-cyan);
+}
+input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: var(--Very-light-grayish-cyan);
+    
+}
+.bill-input{
+    margin-bottom: 2em;
+    direction: rtl;
+    padding-right: 0.5em;
+    color: var(--Very-dark-cyan);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+/* .bill-input:hover{
+    border: 1.5px solid var(--Strong-cyan);
+    cursor: pointer;
+    border-radius: 3px; */
+/* } */
+.bill-input:focus{
+    outline: 1.5px solid var(--Strong-cyan);
+    border-radius: 3px;
+}
+.bill-input::placeholder{
+    float: right;
+    color: var(--Grayish-cyan);
+    font-size: 1.1rem;
+    padding-right: 0.5em;
+}
+.bill-section div{
+    position: relative;
+}
+.bill-section svg{
+    position: absolute;
+    left: 12px;
+    top: 28px;
+}
+.tips{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8em;
+    margin-bottom: 1.9em;
+    margin-top: 0.6em;
+}
+.tip{
+    width: 80px;
+    height: 35px;
+    padding: 0.4em;
+    background-color: var(--Very-dark-cyan);
+    border: none;
+    border-radius: 3px;
+    color: var(--White);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.tip:hover{
+    background-color: var(--Strong-cyan);
+    cursor: pointer;
+}
+.tip-custom{
+    width: 80px;
+    height: 35px;
+    border: none;
+    background-color: var(--Very-light-grayish-cyan);
+    direction: rtl;
+    padding-right: 0.5em;
+    color: var(--Very-dark-cyan);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+/* .tip-custom:hover{
+    border: 1.5px solid var(--Strong-cyan);
+    cursor: pointer;
+    border-radius: 3px;
+} */
+.tip-custom:focus{
+    outline: 1.5px solid var(--Strong-cyan);
+    border-radius: 3px;
+}
+.tip-custom::placeholder{
+    font-size: 1rem;
+}
+::placeholder{
+    color: var(--Dark-grayish-cyan);
+    font-weight: 750;
+    letter-spacing: 1px;
+    padding-left: 0.6em;
+    font-size: 1.1em;
+}
+.errorMsg{
+    color: red;
+    font-size: 0.65rem;
+    float: right;
+    margin-top: 0.5em;
+    display: none;
+}
+.active{
+    display: block;
+}
+
+@media(max-width: 620px){
+    body{
+        font-size: 1.1rem;
+    }
+    .container{
+        width: 100%;
+        flex-direction: column;
+        min-width: 200px;
+    }
+    .bill-section{
+        width: 100%;
+    }
+    .total-section{
+        width: 100%;
+        row-gap: 2em;
+        min-width: 350px;
+    }
+    .tip{
+        width: 45%;
+        height: 45px;
+    }
+    .bill-section svg{
+        position: absolute;
+        left: 12px;
+        top: 33px;
+    }
+    ::placeholder{
+        padding-left: 1em;
+    }
+    .tip-custom{
+        width: 45%;
+        height: 45px;
+    }
+    .tip-custom::placeholder{
+        padding-right: 2rem;
+    }
+}
